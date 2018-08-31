@@ -231,7 +231,13 @@ HAVING COUNT(*) > 1;
 
 #面试：每个人的成绩-10
 UPDATE score SET score = score - 10;
-
+#面试：每个人的成绩+10
+UPDATE score 
+SET score = 
+CASE 
+WHEN score > 90 THEN 100
+WHEN score <= 90 THEN score + 10
+END;
 
 
 
