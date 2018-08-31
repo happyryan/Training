@@ -218,3 +218,20 @@ ORDER BY  AVG(sc.`score`) ASC,
 
 
 
+
+
+
+
+#查询同名同性学生名单，并统计同名人数
+SELECT s.name, COUNT(*)
+FROM student s
+GROUP BY s.`name`
+HAVING COUNT(*) > 1;
+
+
+#面试：每个人的成绩-10
+UPDATE score SET score = score - 10;
+
+
+
+
